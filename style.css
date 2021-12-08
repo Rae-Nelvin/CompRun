@@ -64,6 +64,9 @@ nav{
     justify-content:space-between;
     background-color: #F9F9F9;
     padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 .container-fluid{
@@ -114,7 +117,7 @@ nav > .container-fluid > div > a {
     top: 100%;
     right: 0;
     left: 0;
-    background-color: #bcedf3; /* Ga tau warna */
+    background-color: #E6F2F4; /* Ga tau warna */
     border-radius: 10px;
     color: var(--primary-color);
     width: 200px;
@@ -145,11 +148,13 @@ nav > .container-fluid > div:last-child a {
 /* Section Banner */
 .banner {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 1rem;
+    padding-top: 88px;
 }
 
 .banner-text > div:first-child {
@@ -185,6 +190,18 @@ nav > .container-fluid > div:last-child a {
 .banner-domain {
     margin-top: 2rem;
     text-align: center;
+}
+
+.banner-domain > div:last-child {
+    color: #959595;
+    margin-top: 1rem;
+}
+
+.banner-domain > div:last-child > span {
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: .5rem;
+    margin-left: 1rem;
 }
 
 .banner-input-group {
@@ -228,72 +245,146 @@ nav > .container-fluid > div:last-child a {
 
 /* ISO */
 .iso {
-    height: 15vh;
+    margin: 5rem 0;
     background-color: #F9F9F9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.iso > img {
+    height: 100px;
+    transform: scale(2);
+}
+
 .iso h2 {
     font-weight: 300;
     color: #007fbe;
     font-size: 1.6rem;
+    margin-left: 5rem;
+    line-height: 1.5;
+    padding: 1rem;
 }
 
 /* Features */
 .features {
-    margin-top: 5rem;
-    height: 20vh;
+    margin: 3rem 0 5rem;
+}
+
+.features > .container-fluid {
+    display: block;
 }
 
 .features h2 {
     font-weight: 400;
     text-align: center;
+    font-size: 2.5em;
+}
+
+.feature-container {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    text-align: center;
+    margin-top: 7.5rem;
+}
+
+.feature-card {
+    background-color: #F9F9F9;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    position: relative;
+    padding-top: 7.5rem;
+}
+
+.feature-card > img {
+    background-color: var(--gray-color);
+    width: 60%;
+    height: 55%;
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    right: 0;
+}
+
+.feature-card > h3 {
+    font-weight: 400;
+    font-size: 2.5em;
+    margin: 1rem 0;
+}
+
+.feature-card > p {
+    font-size: 1.25em;
+}
+
+.feature-card > a {
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: #FFF;
+    transform: translateY(2rem);
 }
 
 /* other-features */
 .other-feature {
-    background-image: linear-gradient(180deg, transparent 9%, #F9F9F9 0%);
-    height: 12rem;
     justify-content: center;
     align-items: center;
+    margin: 2rem 0;
 }
 
 .other-feature h2 {
     font-weight: 400;
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.6rem;
+    transform: translateY(-1.25rem);
+    font-size: 2em;
+    letter-spacing: 4px;
+    padding: 0 1rem;
 }
 
-.other-feature div {
-    width: 66%;
+.other-feature > .container-fluid {
+    display: block;
+    background-color: #F6F2EF;
+    border-radius: 4px;
+    width: 80%;
+}
+
+.other-feature > .container-fluid > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0rem 2rem 2rem;
 }
 
 .other-feature div img{
-    width: 31%;
+    padding: 1rem;
 }
-
 
 /* Section Sponsorship */
 .sponsorship {
-    background-image: linear-gradient(90deg, transparent 20%, #F9F9F9 0%);
     padding: 2rem 0;
 }
 
 .sponsorship > .container-fluid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 3fr;
 }
 
 .sponsorship-text > h2 {
-    font-size: 3em;
+    font-size: 4em;
+    font-weight: 400;
 }
 
 .sponsorship-text > p {
     line-height: 1.5;
     padding-top: .5rem;
+    font-size: 1.25em;
 }
 
 .sponsorship-text > ul {
@@ -304,37 +395,67 @@ nav > .container-fluid > div:last-child a {
     font-size: 1.5em;
     display: flex;
     padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .sponsorship-text > ul > li > a > i {
     margin-right: 1rem;
     color: var(--accent-color);
+    background-color: #FEE8E8;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsorship-text > span {
+    color: #959595;
 }
 
 .sponsorship-form {
-    width: 80%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sponsorship-form > form > span {
-    display: block;
-    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: .5rem 1rem;
     background-color: #FEE8E8;
     color: #E04848;
     border-radius: 4px;
+    font-size: 1.1em;
+    margin-bottom: .5rem;
+}
+
+.sponsorship-form > form > span > i {
+    margin-right: .5rem;
 }
 
 .sponsorship-form > form input {
-    display: block;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: .75rem 2rem;
     margin: .5rem 0;
     background-color: #FFF;
-    border: 0;
-    outline: none;
     box-shadow: 1px 1px 5px rgb(149, 149, 149, 0.1);
     border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.1em;
+    outline: none;
+    transition: .2s;
+    font-family: Raleway;
+}
+
+.sponsorship-form > form input:focus {
+    box-shadow: 0px 0px 5px var(--primary-color);
 }
 
 .sponsor-input-group {
@@ -351,11 +472,12 @@ nav > .container-fluid > div:last-child a {
     padding: .75rem 1rem;
     border: 0;
     outline: none;
-    box-shadow: 1px 1px 5px rgb(149, 149, 149, 0.1);
-    background-color: #EFEFEF;
-    color: #959595;
+    background-color: var(--primary-color);
+    color: #FFF;
     font-size: 1.25em;
     border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    font-family: Raleway;
 }
 
 .sponsor-button-group {
@@ -370,6 +492,10 @@ nav > .container-fluid > div:last-child a {
     color: #4C4D4F;
     border: 0;
     border-radius: 4px;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    background-color: #E6F2F4;
+    cursor: pointer;
 }
 
 .sponsor-button-group > button:last-child {
