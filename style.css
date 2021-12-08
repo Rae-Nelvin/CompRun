@@ -8,7 +8,7 @@
     font-size: 16px;
     font-family: Raleway;
     color: #2C2C2C;
-    --marquee-width: 40vw;
+    --marquee-width: 50vw;
     --marquee-height: 10vh;
     --marquee-elements-displayed: 5;
     --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
