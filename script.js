@@ -1,9 +1,9 @@
 const root = document.documentElement;
-const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-const marqueeContent = document.querySelector("ul.marquee-content");
+const carousselElementsDisplayed = getComputedStyle(root).getPropertyValue("--caroussel-elements-displayed");
+const carousselContent = document.querySelector("ul.caroussel-content");
 
-root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+root.style.setProperty("--caroussel-elements", carousselContent.children.length);
 
-for(let i=0; i<marqueeElementsDisplayed; i++) {
-  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+for(let i=0; i<carousselElementsDisplayed; i++) {
+  carousselContent.appendChild(carousselContent.children[i].cloneNode(true));
 }
