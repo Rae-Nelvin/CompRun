@@ -20,7 +20,7 @@
     height: var(--caroussel-height);
     overflow: hidden;
     position: relative;
-    /* width: 100%; */
+    margin: auto;
   }
   .caroussel:before, .caroussel:after {
     position: absolute;
@@ -572,10 +572,15 @@ nav > .container-fluid > div:last-child a {
 }
 
 /* Testimony Section */
+.testimony {
+    margin: 5rem 0;
+}
+
 .testi-header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 3rem 0 2rem;
 }
 
 .testi-header > h2 {
@@ -589,27 +594,97 @@ nav > .container-fluid > div:last-child a {
 }
 
 .testi-button-group > button {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     font-size: 1.5em;
     border-radius: 50%;
     border: 0;
     background-color: #FEE8E8;
     color: var(--accent-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
+    margin: 0 .5rem;
 }
 
 .testi-carousel {
     overflow: hidden;
     position: relative;
+    backface-visibility: hidden;
 }
 
 .testi-carousel-cell {
-    height: 400px;
-    width: 300px;
-    background-color: #4C4D4F;
-    margin: 0 1rem;
+    display: none;
+}
+
+.testi-carousel-cell.active {
+    display: flex;
+    transform: translateX(-75%);
+}
+
+.testi-carousel-cell img {
+    width: 50% !important;
+}
+
+.testi-carousel-cell.left {
+    animation: leftCarousel 1s;
+}
+
+.testi-carousel-cell.right {
+    animation: rightCarousel 1s;
+}
+
+@keyframes leftCarousel {
+    from {
+        transform: translateX(-75%);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+@keyframes rightCarousel {
+    from {
+        transform: translateX(-75%);
+    }
+
+    to {
+        transform: translateX(-125%);
+    }
+}
+
+/* Section Tech Partner */
+.tech-partner {
+    padding: 2rem 0;
+}
+
+.tech-partner > .container-fluid {
+    display: block;
+    text-align: center;
+}
+
+.tech-partner > .container-fluid > span {
+    font-size: 1.25em;
+}
+
+.tech-partner > .container-fluid > h2 {
+    font-size: 2.25em;
+    padding: .5rem 0;
+}
+
+.tech-partner-container {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech-partner-container > div {
+    width: 200px;
+    height: 100px;
+    background-color: #959595;
+    margin: .25rem;
 }
