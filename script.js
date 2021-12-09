@@ -30,32 +30,49 @@ function debounce(func, wait, immediate) {
   };
 };
 
-document.querySelector('#testiPrev').addEventListener('click', debounce(() => {
-  let currCarousel = document.querySelector('.testi-carousel-cell.active');
-  let prevSibling = currCarousel.previousElementSibling;
-  if(!prevSibling) {
-    prevSibling = currCarousel.parentElement.lastElementChild;
-  }
-  console.log(prevSibling);
-  currCarousel.classList.add('left');
-  currCarousel.addEventListener('animationend', () => {
-    currCarousel.classList.remove('left');
-    currCarousel.classList.remove('active');
-    prevSibling.classList.add('active');
-  }, { once: true })
-}, 250))
+setInterval(() => {
+  const ev = new Event('click');
+  document.querySelector('#testiNext').dispatchEvent(ev);
+}, 5000)
 
-document.querySelector('#testiNext').addEventListener('click', debounce(() => {
-  let currCarousel = document.querySelector('.testi-carousel-cell.active');
-  let nextSibling = currCarousel.nextElementSibling;
-  if(!nextSibling) {
-    nextSibling = currCarousel.parentElement.firstElementChild;
+var cooldown = false;
+const RECHARGE_TIME = 1000; //ms
+console.log(cooldown);
+function startCooldown() {
+  cooldown = true;
+  setTimeout (function(){ cooldown = false}, RECHARGE_TIME);
+}
+
+document.querySelector('#testiPrev').addEventListener('click', async () => {
+  if(!cooldown) {
+    await startCooldown();
+    let currCarousel = document.querySelector('.testi-carousel-cell.active');
+    let prevSibling = currCarousel.previousElementSibling;
+    if(!prevSibling) {
+      prevSibling = currCarousel.parentElement.lastElementChild;
+    }
+    currCarousel.classList.add('left');
+    currCarousel.addEventListener('animationend', () => {
+      currCarousel.classList.remove('left');
+      currCarousel.classList.remove('active');
+      prevSibling.classList.add('active');
+    }, { once: true })
   }
-  console.log(nextSibling);
-  currCarousel.classList.add('right');
-  currCarousel.addEventListener('animationend', () => {
-    currCarousel.classList.remove('right');
-    currCarousel.classList.remove('active');
-    nextSibling.classList.add('active');
-  }, { once: true })
-}, 250))
+})
+
+document.querySelector('#testiNext').addEventListener('click', async () => {
+  if(!cooldown) {
+    await startCooldown();
+    let currCarousel = document.querySelector('.testi-carousel-cell.active');
+    let nextSibling = currCarousel.nextElementSibling;
+    if(!nextSibling) {
+      nextSibling = currCarousel.parentElement.firstElementChild;
+    }
+    currCarousel.classList.add('right');
+    currCarousel.addEventListener('animationend', () => {
+      currCarousel.classList.remove('right');
+      currCarousel.classList.remove('active');
+      nextSibling.classList.add('active');
+    }, { once: true })
+  }
+})
