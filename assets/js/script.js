@@ -76,3 +76,20 @@ document.querySelector('#testiNext').addEventListener('click', async () => {
     }, { once: true })
   }
 })
+
+// Navbar
+window.addEventListener('scroll', (e) => {
+  console.log(window);
+  if(window.scrollY > 88) {
+    document.querySelector('nav').classList.add('scrolled');
+    document.querySelector('.scrollToTop').style.display = 'block';
+  } else if(window.scrollY <= 88) {
+    document.querySelector('nav').classList.remove('scrolled');
+    document.querySelector('.scrollToTop').style.display = 'none';
+  }
+})
+
+// Account Pop Up
+document.querySelector('.account-img').addEventListener('click', () => {
+  document.querySelector('.account-menu').style.height = '90px';
+})
