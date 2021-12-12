@@ -165,7 +165,7 @@
 
 /* ISO */
 .iso {
-    margin: 5rem 0;
+    margin: 5rem 0 10rem;
     background-color: #F9F9F9;
     display: flex;
     justify-content: center;
@@ -188,7 +188,7 @@
 
 /* Features */
 .features {
-    margin: 3rem 0 5rem;
+    margin: 5rem 0;
 }
 
 .features > .container-fluid {
@@ -215,15 +215,12 @@
     padding: 1rem 2rem;
     border-radius: 4px;
     position: relative;
-    padding-top: 7.5rem;
+    padding-top: 6rem;
 }
 
 .feature-card > img {
-    background-color: var(--gray-color);
-    width: 60%;
-    height: 55%;
+    height: 50%;
     margin: auto;
-    border-radius: 50%;
     position: absolute;
     top: -5rem;
     left: 0;
@@ -238,6 +235,7 @@
 
 .feature-card > p {
     font-size: 1.25em;
+    font-weight: 400;
 }
 
 .feature-card > a {
@@ -255,7 +253,7 @@
 .other-feature {
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
+    margin: 10rem 0 5rem;
 }
 
 .other-feature h2 {
@@ -288,7 +286,7 @@
 
 /* Section Sponsorship */
 .sponsorship {
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 .sponsorship > .container-fluid {
@@ -416,6 +414,7 @@
     color: var(--primary-color);
     background-color: #E6F2F4;
     cursor: pointer;
+    font-family: Raleway;
 }
 
 .sponsor-button-group > button:last-child {
