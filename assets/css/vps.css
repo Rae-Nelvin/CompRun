@@ -368,6 +368,10 @@
 /* Phone Responsive */
 @media all and (max-width: 320px) and (max-height: 480px){
 
+    :root {
+        overflow-x: hidden;
+    }
+
     /* banner */
     .banner {
         padding: 1.5rem 0;
@@ -382,15 +386,120 @@
     .banner-desc {
         font-size: 1em;
     }
+
+    .best-seller {
+        transform: scale(1);
+    }
     
     /* Product */
 
+    .product {
+        padding: 2rem 0;
+    }
+
     .product-card-container {
-        overflow-x: visible;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-left: .75rem;
+        margin-right: .75rem;
+        grid-template-columns: .1fr .1fr .1fr .1fr;
+        gap: 1.5rem;
     }
     
     .product-card-container > div {
-        flex-basis: 0;
-        flex-grow: 1;
+        flex: 0 0 auto;
+    }
+
+    .product-card-container > div h3 {
+        font-size: calc(1.5em - .1em);
+    }
+
+    .product-card-container > div hr {
+        width: 30%;
+        margin: .8rem auto;
+    }
+
+    .product-card-container > div .price span {
+        font-size: calc(2.5em - .4em);
+    }
+
+    .product-card-container > div ul li {
+        font-size: 12px;
+    }
+
+    .product-card-container > div button {
+        padding: .8rem 1rem;
+    }
+
+    .product-header {
+        margin-left: .3rem;
+        margin-right: .3rem;
+    }
+
+    .product-header h2 {
+        font-size: 1.5em;
+    }
+
+    /* Service */
+    .service {
+        padding: 1.5rem 0;
+    }
+
+    .service-container {
+        display: flex;
+        grid-template-columns: 0;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-left: .75rem;
+        margin-right: .75rem;
+    }
+
+    .service h2{
+        font-size: calc(2.5em - .5em);
+    }
+
+    .service-card {
+        padding: 1rem 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: calc(1.75em - .35em);
+    }
+
+    .sarvice-card hr {
+        margin: .8rem auto;
+    }
+
+    .service-card p{
+        font-size: 13px;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .service-card ul {
+        font-size: 12px;
+    }
+
+    /* Tech partner */
+    .tech-partner {
+        padding: 1rem 0;
+    }
+
+    .tech-partner > .container-fluid > span {
+        font-size: 1.25em;
+    }
+
+    .tech-partner > .container-fluid > h2 {
+        font-size: 1.5em;
+    }
+
+    .tech-partner-container {
+        justify-content: flex-start;
+        margin-left: 2px;
+    }
+
+    .tech-partner-container > div {
+        width: 150px;
+        height: 100px;
     }
 }
