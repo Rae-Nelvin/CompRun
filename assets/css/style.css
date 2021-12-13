@@ -387,7 +387,7 @@
 }
 
 .sponsor-input-group > select {
-    padding: .75rem 1rem;
+    padding: .7rem 1rem;
     border: 0;
     outline: none;
     background-color: var(--primary-color);
@@ -541,4 +541,22 @@
     height: 100px;
     background-color: #959595;
     margin: .25rem;
+}
+
+@media all and (max-width: 768px) {
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        margin-top: 5rem;
+    }
+
+    .sponsorship > div {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media all and (max-width: 320px) {
+
 }

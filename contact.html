@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Hosting Indonesia Terbaik, ISO 27001 Certified | Dewaweb</title>
-    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <!-- Font Icon (BoxIcon) -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -46,59 +46,24 @@
         </nav>
     </header>
     <main>
-        <section class="banner">
-            <div class="container-fluid">
-                <div class="banner-text">
-                    <h1>Dewaweb was founded in 2014 to be<br><strong>Indonesia’s first secure, fast, and reliable cloud hosting provider.</strong></h1>
-                    <span><b>Big teams</b> behind the Dewaweb.</span>
-                </div>
-            </div>
+        <section class="voucher">
+            <!-- Belum ada voucher -->
         </section>
-        <section class="vision">
+        <section class="contact">
             <div class="container-fluid">
-                <ul>
-                    <li class="active" id="vision">Our <b>Vision</b></li>
-                    <li id="mission">Our <b>Mission</b></li>
-                </ul>
-                <div class="vision-container">
+                <h1>We are here to help and solve<br>your problems, <span>anytime.</span></h1>
+                <div class="contact-container">
                     <div>
-                        <h2><span>The most trusted</span> cloud hosting company in Indonesia.</h2>
-                        <p>
-                            Dewaweb serves more than 42.000 customers now and is the first to receive ISO 27001 Certification, the world class gold standard for Information Security Management.
-                        </p>
+                        <ul>
+                            <li><a href="#"><i class='bx bx-mail-send'></i> partnership@gmail.com</a></li>
+                            <li><a href="#"><i class='bx bxs-phone' ></i> (021) 2212-4702</a></li>
+                            <li><a href="#"><i class='bx bxl-whatsapp' ></i> 0813-1888-4702</a></li>
+                        </ul>
                     </div>
                     <div>
-                        <img src="assets/images/banner2About.png" alt="Dewaweb Mascot">
+                        <img src="assets/images/contact.png" alt="Dewaweb Contact">
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="iso">
-            <img src="assets/images/logo-iso-1.png" alt="Logo Iso">
-            <h2>Dewaweb as <b>the first ISO 27001 certified <br>web hosting provider in Indonesia.</b></h2>
-        </section>
-        <section class="quote">
-            <div class="container-fluid">
-                <div>
-                    <img src="assets/images/CEO.png" alt="Dewaweb CEO">
-                </div>
-                <div>
-                    <p>
-                        The first step to succeed online is to <b>get a <span>good domain</span> name and the <span>best host</span> for your website!</b>
-                    </p>
-                    <div class="quote-desc">
-                        <div>Edy Budiman</div>
-                        <div>Founder & CEO DewaWeb</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="office">
-            <div class="container-fluid">
-                <h2>Our <b>Office & Teams</b></h2>
-            </div>
-            <div class="office-img-container">
-                <!-- Gambarnya blom -->
             </div>
         </section>
         <section class="collab">
@@ -221,20 +186,5 @@
     
     <!-- Script -->
     <script src="assets/js/script.js"></script>
-    <script>
-        document.querySelector('#vision').addEventListener('click', () => {
-            document.querySelector('.vision li.active').classList.remove('active');
-            document.querySelector('#vision').classList.add('active');
-            document.querySelector('.vision-container h2').innerHTML= `<span>The most trusted</span> cloud hosting company in Indonesia.`;
-            document.querySelector('.vision-container h2').style.fontSize = '3.5em';
-        })
-
-        document.querySelector('#mission').addEventListener('click', () => {
-            document.querySelector('.vision li.active').classList.remove('active');
-            document.querySelector('#mission').classList.add('active');
-            document.querySelector('.vision-container h2').innerHTML= `To provide <span>easy-to-use, affordable</span> and <span>great services</span> to help our customers succeed online.`;
-            document.querySelector('.vision-container h2').style.fontSize = '3em';
-        })
-    </script>
 </body>
 </html>

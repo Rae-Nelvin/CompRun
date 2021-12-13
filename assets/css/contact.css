@@ -1,0 +1,124 @@
+@import url(root.css);
+
+/* Section Contact */
+.contact {
+    padding-top: calc(88px + 3rem);
+}
+
+.contact > .container-fluid {
+    display: block;
+}
+
+.contact h1 {
+    font-size: 3em;
+}
+
+.contact h1 span {
+    color: var(--primary-color);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact ul {
+    margin: 3rem 0;
+    margin-left: 3rem;
+}
+
+.contact ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 1.75em;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+}
+
+.contact ul li a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    width: 52px;
+    height: 52px;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(0, 127, 142, 0.1);
+}
+
+.contact img {
+    max-width: 100%;
+}
+
+/* Section Collab */
+.collab {
+    padding: 0 0 3rem;
+    margin-bottom: 3rem;
+}
+
+.collab-container {
+    background-color: var(--primary-color);
+    padding: 4rem 6rem;
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.collab-container h2 {
+    font-size: 2em;
+}
+
+.collab-container p {
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: .5rem 0;
+}
+
+.collab-container button {
+    display: block;
+    align-self: center;
+    padding: 1rem 2.5rem;
+    font-size: 1.25em;
+    font-family: Raleway;
+    border: 0;
+    outline: none;
+    background-color: var(--accent-color);
+    color: #FFF;
+}
+
+/* Section Tech Partner */
+.tech-partner {
+    padding: 2rem 0;
+}
+
+.tech-partner > .container-fluid {
+    display: block;
+    text-align: center;
+}
+
+.tech-partner > .container-fluid > span {
+    font-size: 1.25em;
+}
+
+.tech-partner > .container-fluid > h2 {
+    font-size: 2.25em;
+    padding: .5rem 0;
+}
+
+.tech-partner-container {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tech-partner-container > div {
+    width: 200px;
+    height: 100px;
+    background-color: #959595;
+    margin: .25rem;
+}

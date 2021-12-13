@@ -37,7 +37,6 @@ setInterval(() => {
 
 var cooldown = false;
 const RECHARGE_TIME = 1000; //ms
-console.log(cooldown);
 function startCooldown() {
   cooldown = true;
   setTimeout (function(){ cooldown = false}, RECHARGE_TIME);
@@ -79,7 +78,6 @@ document.querySelector('#testiNext').addEventListener('click', async () => {
 
 // Navbar
 window.addEventListener('scroll', (e) => {
-  console.log(window);
   if(window.scrollY > 88) {
     document.querySelector('nav').classList.add('scrolled');
     document.querySelector('.scrollToTop').style.display = 'block';
