@@ -453,23 +453,24 @@ nav {
 
     .quote {
         margin: 0 0;
-        height: 80vh;
-        background: linear-gradient(350deg, #F9F9F9 30%, transparent 0%);
+        padding: 0 0;
+        height: 60vh;
+        background: linear-gradient(350deg, #F9F9F9 25%, transparent 0%);
     }
 
     .quote p {
-        font-size: 1.25em;
+        font-size: 1em;
         margin-right: .75rem;
     }
 
     .quote img {
-        margin-top: 12rem;
+        margin-top: 8.4rem;
     }
 
     .quote-desc {
         font-size: calc(1.25em - .25em);
         margin-right: .75rem;
-        margin-top: 6rem
+        margin-top: 2rem;
     }
 
     /* office */
@@ -514,12 +515,16 @@ nav {
         padding: 1rem 0;
     }
 
+    .tech-partner > .container-fluid {
+        width: 100%;
+    }
+
     .tech-partner > .container-fluid > span {
         font-size: 1.25em;
     }
 
     .tech-partner > .container-fluid > h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .tech-partner-container {
@@ -528,7 +533,7 @@ nav {
     }
 
     .tech-partner-container > div {
-        width: 150px;
+        width: 130px;
         height: 100px;
     }
 }

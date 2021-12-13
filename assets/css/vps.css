@@ -368,16 +368,66 @@
     margin: .25rem;
 }
 
-/* Phone Responsive */
-@media all and (max-width: 320px) and (max-height: 480px){
+/* Tablet Responsive */
+@media all and (max-width: 768px){
 
-    :root {
-        overflow-x: hidden;
+    :root {overflow-x: hidden;}
+
+    /* banner */
+    .banner-title {
+        font-size: 2em;
     }
+
+    .banner-desc {
+        padding: 2rem 0;
+        padding-right: 1rem;
+    }
+
+    /* feature */
+    .feature-card-container span {
+        padding: .5rem .75rem;
+    }
+
+    /* product */
+    .product {
+        padding: 4rem 0;
+    }
+
+    .product-card-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-left: .75rem;
+        margin-right: .75rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .product-card-container > div {
+        flex: 0 0 auto;
+        margin-bottom: 2.5rem;
+    }
+
+    /* service */
+    .service {
+        padding: 2rem 0;
+    }
+
+    /* tech partner */
+    .tech-partner > .container-fluid > span {
+        font-size: 1.5em;
+    }
+
+    .tech-partner > .container-fluid > h2 {
+        width: 90%;
+    }
+
+}
+
+/* Phone Responsive */
+@media all and (max-width: 320px){
 
     /* banner */
     .banner {
-        padding: 1.5rem 0;
         height: 100vh;
         margin-right: 1rem;
     }
@@ -386,31 +436,34 @@
         font-size: 2rem;
     }
 
+    .banner > .container-fluid {
+        grid-template-columns: .5fr 1fr;
+    }
+
     .banner-desc {
-        font-size: 1em;
+        font-size: .75em;
+        padding-right: 0;
     }
 
     .best-seller {
         transform: scale(1);
+    }
+
+    /* feature */
+    .feature {
+        width: 100%;
     }
     
     /* Product */
 
     .product {
         padding: 2rem 0;
+        width: 100%;
     }
 
     .product-card-container {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin-left: .75rem;
-        margin-right: .75rem;
         grid-template-columns: .1fr .1fr .1fr .1fr;
         gap: 1.5rem;
-    }
-    
-    .product-card-container > div {
-        flex: 0 0 auto;
     }
 
     .product-card-container > div h3 {
@@ -446,8 +499,9 @@
     /* Service */
     .service {
         padding: 1.5rem 0;
+        width: 100%;
     }
-
+    
     .service-container {
         display: flex;
         grid-template-columns: 0;
@@ -455,6 +509,10 @@
         overflow-x: auto;
         margin-left: .75rem;
         margin-right: .75rem;
+    }
+
+    .service-container > div {
+        flex: 0 0 wrap;
     }
 
     .service h2{
@@ -488,12 +546,16 @@
         padding: 1rem 0;
     }
 
+    .tech-partner > .container-fluid {
+        width: 100%;
+    }
+
     .tech-partner > .container-fluid > span {
         font-size: 1.25em;
     }
 
     .tech-partner > .container-fluid > h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     .tech-partner-container {
@@ -502,7 +564,7 @@
     }
 
     .tech-partner-container > div {
-        width: 150px;
+        width: 130px;
         height: 100px;
     }
 }
