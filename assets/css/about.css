@@ -77,6 +77,14 @@ header nav {
     padding: 1rem 0;
 }
 
+.visionH2 {
+    font-size: 3.5em !important;
+}
+
+.missionH2 {
+    font-size: 3em !important;
+}
+
 .vision-container h2 span {
     color: var(--primary-color);
 }
@@ -374,6 +382,10 @@ header nav {
 
     .vision-container h2 {
         font-size: 2em;
+    }
+
+    .visionH2, .missionH2 {
+        font-size: 2em !important;
     }
 
     .vision > .container-fluid {

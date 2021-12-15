@@ -241,18 +241,31 @@
     <!-- Script -->
     <script src="assets/js/script.js"></script>
     <script>
+        window.addEventListener('scroll', (e) => {
+            if(window.scrollY > 88) {
+                document.querySelector('nav').classList.add('scrolled');
+                document.querySelector('.scrollToTop').style.display = 'block';
+            } else if(window.scrollY <= 88) {
+                document.querySelector('nav').classList.remove('scrolled');
+                document.querySelector('.scrollToTop').style.display = 'none';
+            }
+        })
+
         document.querySelector('#vision').addEventListener('click', () => {
             document.querySelector('.vision li.active').classList.remove('active');
             document.querySelector('#vision').classList.add('active');
             document.querySelector('.vision-container h2').innerHTML= `<span>The most trusted</span> cloud hosting company in Indonesia.`;
             document.querySelector('.vision-container h2').style.fontSize = '3.5em';
+            document.querySelector('.vision-container h2').classList.add('visionH2');
+            document.querySelector('.vision-container h2').classList.remove('missionH2');
         })
 
         document.querySelector('#mission').addEventListener('click', () => {
             document.querySelector('.vision li.active').classList.remove('active');
             document.querySelector('#mission').classList.add('active');
             document.querySelector('.vision-container h2').innerHTML= `To provide <span>easy-to-use, affordable</span> and <span>great services</span> to help our customers succeed online.`;
-            document.querySelector('.vision-container h2').style.fontSize = '3em';
+            document.querySelector('.vision-container h2').classList.add('missionH2');
+            document.querySelector('.vision-container h2').classList.remove('visionH2');
         })
 
         document.querySelector('.burger').addEventListener('click', () => {

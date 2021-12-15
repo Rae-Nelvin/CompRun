@@ -206,6 +206,16 @@
     <!-- Script -->
     <script src="assets/js/script.js"></script>
     <script>
+        window.addEventListener('scroll', (e) => {
+            if(window.scrollY > 88) {
+                document.querySelector('nav').classList.add('scrolled');
+                document.querySelector('.scrollToTop').style.display = 'block';
+            } else if(window.scrollY <= 88) {
+                document.querySelector('nav').classList.remove('scrolled');
+                document.querySelector('.scrollToTop').style.display = 'none';
+            }
+        })
+
         document.querySelector('.burger').addEventListener('click', () => {
             document.querySelector('.nav-mobile').style.width = '100%'
         })
