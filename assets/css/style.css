@@ -137,6 +137,12 @@
     background-color: var(--gray-color);
     border: 0;
     outline: none;
+    border: 1px solid var(--gray-color);
+    transition: .3s;
+}
+
+.banner-input-group > input:focus {
+    border: 1px solid var(--accent-color);
 }
 
 .banner-input-group > button {
@@ -146,6 +152,7 @@
     padding: 0 2rem;
     display: block;
     box-shadow: 1px 1px 10px var(--accent-color);
+    cursor: pointer;
 }
 
 .banner-partner {
@@ -250,6 +257,13 @@
     background-color: var(--accent-color);
     color: #FFF;
     transform: translateY(2rem);
+    transition: .3s;
+    border: 1px solid var(--accent-color);
+}
+
+.feature-card > a:hover {
+    background-color: #FFF;
+    color: var(--accent-color);
 }
 
 /* other-features */
@@ -418,12 +432,19 @@
     background-color: #E6F2F4;
     cursor: pointer;
     font-family: Raleway;
+    transition: .3s;
 }
 
 .sponsor-button-group > button:last-child {
     background-color: var(--accent-color);
     color: #FFF;
     margin-left: 1rem;
+    border: 1px solid var(--accent-color);
+}
+
+.sponsor-button-group > button:last-child:hover {
+    background-color: transparent !important;
+    color: var(--accent-color) !important;
 }
 
 /* Testimony Section */

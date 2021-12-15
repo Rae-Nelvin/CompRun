@@ -39,12 +39,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--accent-color);
     width: 52px;
     height: 52px;
     margin-right: 1.5rem;
     border-radius: 50%;
-    background-color: rgb(0, 127, 142, 0.1);
+    background-color: #FEE8E8;
 }
 
 .contact img {
@@ -87,6 +87,13 @@
     outline: none;
     background-color: var(--accent-color);
     color: #FFF;
+    border: 1px solid var(--accent-color);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.collab-container button:hover {
+    background-color: transparent;
 }
 
 /* Section Tech Partner */

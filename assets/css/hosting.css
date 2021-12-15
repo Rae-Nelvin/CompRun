@@ -93,7 +93,11 @@
     display: block;
     margin-top: 2rem;
     color: #959595;
-    /* font-size: 1.25em; */
+    transition: .3s;
+}
+
+.feature-title a:hover, .product-category a:hover {
+    color: #2c2c2c;
 }
 
 /* Section Product */
@@ -143,6 +147,7 @@
     text-align: right;
     padding: .75rem 0;
     color: #959595;
+    transition: .3s;
 }
 
 .product-card-container {
@@ -232,6 +237,13 @@
     color: #FFF;
     cursor: pointer;
     width: 100%;
+    border: 1px solid var(--accent-color);
+    transition: .3s;
+}
+
+.product-card-container > div button:hover {
+    background-color: transparent;
+    color: var(--accent-color);
 }
 
 /* Section Service */

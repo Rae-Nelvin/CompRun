@@ -125,12 +125,16 @@ header nav > .container-fluid > div > a {
     padding: 1rem;
     position: relative;
     cursor: pointer;
+    transition: .2s;
+}
+
+.navbar-nav > .nav-item:hover {
+    font-weight: 600;
 }
 
 .nav-item:hover > ul {
     display: block;
 }
-
 
 .nav-item > ul {
     position: absolute;
@@ -169,6 +173,10 @@ nav > .container-fluid > div:last-child {
 
 nav > .container-fluid > div:last-child a {
     color: #959595;
+}
+
+nav > .container-fluid > div:last-child a:hover {
+    color: #2C2C2C;
 }
 
 .account-img {
@@ -310,6 +318,11 @@ nav > .container-fluid > div:last-child a {
     display: block;
     margin: .75rem 0;
     color: #2C2C2C;
+    transition: .3s;
+}
+
+.footer-first-layer ul > li > a:hover {
+    color: rgb(44, 44, 44, 0.6);
 }
 
 .footer-container > hr {
@@ -351,6 +364,12 @@ nav > .container-fluid > div:last-child a {
     align-items: center;
     border-radius: 50%;
     margin-left: 1rem;
+    transition: .3s;
+}
+
+.footer-icon a:hover {
+    background-color: transparent;
+    color: #2C2C2C;
 }
 
 .copyright {
@@ -374,6 +393,11 @@ nav > .container-fluid > div:last-child a {
 
 .copyright a {
     margin: 0 1rem;
+    transition: .3s;
+}
+
+.copyright a:hover {
+    color: rgb(44, 44, 44, 0.6);
 }
 
 /* ScrollToTop */
