@@ -1,8 +1,46 @@
 @import url(root.css);
 
+/* Section Alert */
+.alert {
+    padding-top: calc(88px);
+    background-color: #FEE8E8;
+    color: #E04848;
+    position: relative;
+    overflow: hidden;
+}
+
+.alert > div {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+}
+
+.alert > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert > div > div > div:first-child {
+    flex-basis: 300px;
+}
+
+.alert b {
+    font-size: 1.25em;
+}
+
+.alert button {
+    font-size: 2em;
+    padding: .5rem;
+    color: #959595;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 /* Section Contact */
 .contact {
-    padding-top: calc(88px + 3rem);
+    padding-top: 3rem;
 }
 
 .contact > .container-fluid {
@@ -130,6 +168,10 @@
 
 /* Tablet Responsive */
 @media all and (max-width: 768px) {
+    .alert {
+        font-size: .75em;
+    }
+
     .contact > div {
         width: 90%;
         margin: auto;
@@ -170,8 +212,14 @@
 
 /* Phone Responsive */
 @media all and (max-width: 576px) {
-    .contact {
-        padding-top: calc(88px + 1rem);
+    .alert > div > div {
+        flex-direction: column;
+    }
+
+    .alert > div > div > div:first-child {
+        flex-basis: 0;
+        align-self: flex-start;
+        margin-bottom: .5rem;
     }
 
     .contact > div {

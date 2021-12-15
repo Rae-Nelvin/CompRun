@@ -4,10 +4,31 @@
     font-weight: 600;
 }
 
+/* Section Voucher */
+.voucher {
+    padding-top: 88px;
+    position: relative;
+    overflow: hidden;
+}
+
+.voucher div {
+    position: absolute;
+    right: 0;
+    top: 88px;
+}
+
+.voucher button {
+    font-size: 2em;
+    padding: .5rem;
+    color: #959595;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 /* Section Banner */
 .banner {
-    padding: 3rem 0;
-    padding-top: 88px;
+    padding: 1rem 0 3rem;
 }
 
 .banner > .container-fluid {
@@ -389,7 +410,15 @@
 
 /* Tablet Responsive */
 @media all and (max-width: 768px){
+    .voucher {
+        display: none;
+    }
+
     /* banner */
+    .banner {
+        padding-top: calc(88px + 1rem);
+    }
+
     .banner-title {
         font-size: 2em;
     }
@@ -471,7 +500,7 @@
 }
 
 /* Phone Responsive */
-@media all and (max-width: 320px){
+@media all and (max-width: 576px){
     /* banner */
     .banner {
         padding-bottom: 1rem;

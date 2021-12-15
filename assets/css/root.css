@@ -63,7 +63,7 @@ main {
 }
 
 header nav{
-    position:relative;
+    position:fixed;
     display:-ms-flexbox;
     display:flex;
     -ms-flex-wrap:wrap;
@@ -279,6 +279,16 @@ nav > .container-fluid > div:last-child a:hover {
     display: block;
 }
 
+.nav-mobile-account {
+    font-size: 1.25em;
+    margin-top: 1rem;
+    background-color: #00B3C8;
+    padding: .5rem 1rem;
+    color: #FFF;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
 /* Footer */
 .footer {
     padding: 3rem 0 1rem;
@@ -463,6 +473,18 @@ nav > .container-fluid > div:last-child a:hover {
         overflow: hidden;
     }
 
+    .navbar-nav {
+        display: none;
+    }
+
+    .account-img {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
     #Top nav > div > div:last-child > a {
         display: none;
     }
@@ -484,19 +506,7 @@ nav > .container-fluid > div:last-child a:hover {
     }
 }
 
-@media all and (max-width: 476px) {
-    .navbar-nav {
-        display: none;
-    }
-
-    .account-img {
-        display: none;
-    }
-
-    .burger {
-        display: block;
-    }
-
+@media all and (max-width: 576px) {
     .footer-first-layer, .footer-second-layer {
         grid-template-columns: 1fr;
     }

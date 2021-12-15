@@ -4,10 +4,31 @@
     font-weight: 600;
 }
 
+/* Section Voucher */
+.voucher {
+    padding-top: 88px;
+    position: relative;
+    overflow: hidden;
+}
+
+.voucher div {
+    position: absolute;
+    right: 0;
+    top: 88px;
+}
+
+.voucher button {
+    font-size: 2em;
+    padding: .5rem;
+    color: #959595;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
 /* Section Banner */
 .banner {
-    padding: 3rem 0;
-    padding-top: 88px;
+    padding: 1rem 0 3rem;
 }
 
 .banner > .container-fluid {
@@ -30,13 +51,35 @@
     font-size: 1.25em;
     line-height: 1.5;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    height: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.banner-desc h2 {
+    margin-bottom: 1rem;
 }
 
 .banner-desc p {
     width: 80%;
+}
+
+.banner-services {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.banner-services img {
+    width: 100px;
+}
+
+.banner-services > div div {
+    font-size: .75em;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 /* Section Feature */
@@ -389,7 +432,15 @@
 
 /* Tablet Responsive */
 @media all and (max-width: 768px){
+    .voucher {
+        display: none;
+    }
+
     /* banner */
+    .banner {
+        padding-top: calc(88px + 1rem);
+    }
+
     .banner-title {
         font-size: 2em;
     }
@@ -401,6 +452,14 @@
 
     .banner-desc p {
         width: 90%;
+    }
+
+    .banner-services {
+        gap: 1rem;
+    }
+
+    .banner-services img {
+        width: 75px;
     }
 
     /* feature */
@@ -471,7 +530,7 @@
 }
 
 /* Phone Responsive */
-@media all and (max-width: 320px){
+@media all and (max-width: 576px){
     /* banner */
     .banner {
         padding-bottom: 1rem;
@@ -489,6 +548,20 @@
     .banner-desc {
         font-size: .75em;
         padding-right: 0;
+        padding-top: 1rem;
+    }
+
+    .banner-desc p {
+        text-align: left;
+        width: 100%;
+    }
+
+    .banner-desc h2 {
+        margin-top: 2rem;
+    }
+
+    .banner-services img {
+        width: 50px;
     }
 
     /* feature */
