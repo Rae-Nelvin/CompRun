@@ -51,11 +51,11 @@
     /* height: 100%; */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     html { font-size: 12px; }
     :root {
         --caroussel-width: 100vw;
-        --caroussel-height: 16vh;
+        --caroussel-height: 100px;
         --caroussel-elements-displayed: 3;
     }
     .caroussel:before, .caroussel:after { width: 5rem; }
@@ -91,7 +91,7 @@
     margin-top: 1rem;
 }
 
-.banner-text > h1 > span {
+.banner-text > h1 > span:last-child {
     font-size: 1.75em;
     display: block;
     color: #2C2C2C;
@@ -102,7 +102,7 @@
 }
 
 .banner-vector img {
-    margin-left: 7.5rem;
+    margin-left: 12rem;
     width: 300px;
     max-width: 100%;
 }
@@ -196,9 +196,12 @@
 }
 
 .features h2 {
-    font-weight: 400;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3em;
+}
+
+.features h2 span {
+    color: var(--primary-color);
 }
 
 .feature-container {
@@ -534,23 +537,43 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.tech-partner-container > div {
+.tech-partner-container > div > img {
     width: 200px;
-    height: 100px;
-    background-color: #959595;
-    margin: .25rem;
+}
+
+@media all and (max-width: 1200px) {
+    .feature-card h3 {
+        font-size: 2em;
+    }
+
+    .feature-card p {
+        font-size: 1em;
+    }
+
+    .feature-card a {
+        font-size: .75em;
+    }
+
+    .feature-card {
+        padding-top: 8rem;
+    }
 }
 
 /* Tablet Responsive */
 @media all and (max-width: 768px) {
-    .feature-container {
-        grid-template-columns: 1fr;
+    .banner h1 > span:first-child {
+        display: none;
     }
 
-    .feature-card {
-        margin-top: 5rem;
+    .banner-vector img {
+        margin-left: 2rem;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
     }
 
     .sponsorship > div {
@@ -561,10 +584,6 @@
         width: calc(var(--caroussel-width) + 10rem);
     }
 
-    .banner {
-        min-height: 70vh;
-    }
-
     .iso > img {
         margin-left: 2rem;
     }
@@ -573,9 +592,15 @@
         margin: 0 0;
     }
 
+    .feature-container {
+        margin-top: 2rem;
+    }
+
     .feature-card {
         padding: 3.75rem 2rem;
         padding-top: 7rem;
+        width: 80%;
+        margin: 5rem auto 0;
     }
 
     .other-feature > .container-fluid {
@@ -588,6 +613,10 @@
 
     .sponsorship-form {
         margin-top: 3rem;
+    }
+
+    .sponsorship-form form {
+        width: 100%;
     }
 
     .testi-carousel-cell.active {
@@ -604,10 +633,112 @@
 
     .tech-partner > .container-fluid > h2 {
         width: 90%;
+        margin: auto;
     }
 
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 576px) {
+    .banner h1 {
+        font-size: 1.5em;
+    }
 
+    .banner-text > div:first-child {
+        font-size: 1em;
+    }
+
+    .banner button {
+        padding: .5rem 1rem;
+    }
+
+    .banner input {
+        width: 200px;
+    }
+
+    .banner-vector {
+        display: none
+    }
+
+    .banner-domain > div:last-child {
+        font-size: .5em;
+    }
+
+    .caroussel {
+        width: var(--caroussel-width);
+    }
+
+    .iso {
+        flex-direction: column;
+    }
+
+    .iso img {
+        transform: scale(1);
+        width: 70%;
+        height: auto;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .iso h2 {
+        margin: 0;
+    }
+
+    .feature-card {
+        padding: 3.75rem 2rem;
+        padding-top: 7rem;
+        margin-top: 5rem;
+        width: 100%;
+    }   
+    
+    .sponsorship {
+        padding: 0;
+    }
+
+    .sponsorship-text h2 {
+        font-size: 2em;
+    }
+
+    .sponsorship-text p {
+        font-size: 1em;
+    }
+
+    .sponsorship-text ul {
+        padding: 1rem 0;
+    }
+
+    .sponsorship-text ul li a {
+        font-size: 1em;
+        letter-spacing: 0;
+    }
+
+    .sponsorship-text ul li a i {
+        width: 25px;
+        height: 25px;
+    }
+
+    .other-feature {
+        margin-top: 5rem;
+    }
+
+    .testimony h2 {
+        padding: 0 1rem;
+        font-size: 2em;
+    }
+
+    .testi-button-group {
+        display: none;
+    }
+
+    .testi-carousel {
+        display: none;
+    }
+
+    .testi-mobile {
+        height: 200px;
+        background-color: #007fbe;
+    }
+
+    .tech-partner-container > div > img {
+        width: 100px;
+    }
 }

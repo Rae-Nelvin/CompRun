@@ -1,6 +1,6 @@
 @import url('root.css');
 
-nav {
+header nav {
     position: relative;
 }
 
@@ -251,66 +251,58 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.tech-partner-container > div {
+.tech-partner-container > div > img {
     width: 200px;
-    height: 100px;
-    background-color: #959595;
-    margin: .25rem;
 }
 
 /* Tablet Responsive */
 @media all and (max-width: 768px) {
-    :root {
-        overflow-x: hidden;
-    }
-
     /* banner */
     .banner {
-       background-size: 768px;
-       height: 40vh;
+       height: auto;
+       padding: 0;
+    }
+
+    .banner > div {
+        background: linear-gradient(to right, var(--secondary-color) 70%, transparent);
     }
 
     .banner-text {
-        width: 90%;
+        width: 70%;
+        padding: 2rem 2rem 0;
     }
 
     .banner-text > h1 {
         font-size: 1.5em;
     }
 
-    .banner-text > span {
-        text-align: right;
-    }
-
     /* Vision */
-    .vision {
-        padding: 0 0;
-    }
-
     .vision > .container-fluid {
         width: 90%;
+        margin: auto;
     }
 
     .vision ul {
-        justify-content: center;
+        justify-content: flex-start;
     }
     
     .vision ul > li {
-        font-size: 2em;
+        font-size: 1.5em;
         text-align: center;
     }
 
+    .vision img {
+        display: none;
+    }
+
     .vision-container {
-        grid-template-columns: 1.4fr 1.5fr;
+        grid-template-columns: 1fr;
     }
 
     /* iso */
-    .iso {
-        margin: 3rem 0;
-    }
-
     .iso > img {
         margin-left: 2rem;
     }
@@ -333,69 +325,46 @@ nav {
         padding: 2rem 0;
     }
 
-    .office-img-container {
-        margin: 2rem 1rem;
-    }
-
     /* Collab */
     .collab {
-        padding: 1.5rem 0;
+        padding: 0;
     }
 
     .collab-container {
-        padding: 3rem 3rem;
+        padding: 2rem 3rem;
         gap: 3rem;
-    }
-
-    /* tech partner */
-    .tech-partner {
-        padding: .5rem 0;
-    }
-
-    .tech-partner > .container-fluid {
-        width: 90%;
-    }
-
-    .tech-partner > .container-fluid > span {
-        font-size: 1.75em;
-    }
-
-    .tech-partner > .container-fluid > h2 {
-        padding: .5rem 2rem;
-    }
-
-    .tech-partner-container {
-        padding: 0 0;
+        font-size: .75em;
     }
 }
 
 /* Phone Responsive */
-@media all and (max-width: 320px) {
-    
+@media all and (max-width: 576px) {
     /* banner */
     .banner {
-        background: rgba(0, 127, 142, 1);
-        height: 80vh;
-        padding-bottom: 0;
+        background: var(--secondary-color);
     }
 
     .banner > .container-fluid {
         align-items: center;
         justify-content: center;
+        background: none;
     }
 
     .banner-text {
         margin-bottom: 0;
+        width: 100%;
+        padding: 1rem;
     }
 
     .banner-text > h1 {
-        font-size: calc(2em - 6px);
-        text-align: center;
+        font-size: 1.25em;
+        text-align: left;
+        letter-spacing: 0;
     }
 
     .banner-text > span {
         text-align: center;
-        font-size: 1.25em;
+        font-size: 1em;
     }
 
     /* vision */
@@ -404,7 +373,7 @@ nav {
     }
 
     .vision-container h2 {
-        font-size: calc(3.5em - 1.5em);
+        font-size: 2em;
     }
 
     .vision > .container-fluid {
@@ -413,18 +382,14 @@ nav {
 
     .vision ul  {
         width: 100%;
-        margin-block-end: 0;
+        justify-content: center;
     }
 
     .vision ul > li {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 
-    .vision-container {
-        display: flex;
-    }
-
-    .vision-container h2, .vision-container p{
+    .vision-container h2, .vision-container p {
         padding: 1rem 0 0 .75rem;
     }
 
@@ -434,70 +399,59 @@ nav {
 
     /* iso */
     .iso {
-        margin: 0;
+        flex-direction: column;
+        margin: 1rem;
     }
 
-    .iso > img {
-        margin-left: 1rem;
-        transform: scale(1.5);
+    .iso img {
+        transform: scale(1);
+        width: 70%;
+        height: auto;
+        margin: auto;
+        margin-top: 1rem;
     }
 
     .iso h2 {
-        font-size: calc(1.6rem - .65rem);
-        margin: 1rem 0 1rem 0;
-        text-align: right;
-        padding-left: 2rem;
+        margin: 0;
+        font-size: 1.5em;
     }
 
     /* quote */
-
     .quote {
-        margin: 0 0;
-        padding: 0 0;
-        height: 60vh;
-        background: linear-gradient(350deg, #F9F9F9 25%, transparent 0%);
+        background: linear-gradient(350deg, #F9F9F9 40%, transparent 0%);
+    }
+
+    .quote > div{
+        grid-template-columns: 1fr !important;
     }
 
     .quote p {
-        font-size: 1em;
-        margin-right: .75rem;
-    }
-
-    .quote img {
-        margin-top: 8.4rem;
+        font-size: 1.2em;
     }
 
     .quote-desc {
-        font-size: calc(1.25em - .25em);
-        margin-right: .75rem;
-        margin-top: 2rem;
+        font-size: 1em;
+        margin-top: 1rem;
     }
 
     /* office */
-
     .office h2 {
-        font-size: calc(2.5em - .75em);
+        font-size: 2.25em;
     }
 
     .office-img-container {
-        margin: 2rem 2rem 0 2rem;
         height: 360px;
     }
 
     /* Collab */
-    .collab {
-        padding: 1rem 0;
-        max-width: 100vw;
-        overflow: hidden;
-        margin-bottom: 1.25rem;
-    }
-
     .collab-container {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .collab-container h2{
-        font-size: 1.4em;
+        font-size: 2em;
     }
 
     .collab-container p {
@@ -505,35 +459,14 @@ nav {
     }
 
     .collab-container button {
-        padding: .5rem 1rem;
+        padding: .5rem 0;
         font-size: 1em;
         border-radius: 4px;
-    }
-
-    /* Tech partner */
-    .tech-partner {
-        padding: 1rem 0;
-    }
-
-    .tech-partner > .container-fluid {
+        display: block;
         width: 100%;
     }
 
-    .tech-partner > .container-fluid > span {
-        font-size: 1.25em;
-    }
-
-    .tech-partner > .container-fluid > h2 {
-        font-size: 1.2em;
-    }
-
-    .tech-partner-container {
-        justify-content: flex-start;
-        margin-left: 2px;
-    }
-
-    .tech-partner-container > div {
-        width: 130px;
-        height: 100px;
+    .tech-partner-container > div > img {
+        width: 100px;
     }
 }

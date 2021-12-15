@@ -1,5 +1,8 @@
 @import url('root.css');
 
+.nav-item > span {
+    font-weight: 600;
+}
 
 /* Section Banner */
 .banner {
@@ -262,6 +265,11 @@
     text-align: center;
     padding: 1.5rem 2rem;
     border: 1px solid #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .service-card h3 {
@@ -281,6 +289,7 @@
 
 .service-card ul {
     text-align: left;
+    width: 100%;
     margin: 1rem 0;
 }
 
@@ -304,7 +313,7 @@
 
 .service-card button {
     display: block;
-    margin: auto;
+    margin: 0 auto;
     padding: .75rem 2rem;
     margin-top: 2rem;
     background-color: rgb(0, 127, 142, 0.1);
@@ -359,20 +368,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.tech-partner-container > div {
+.tech-partner-container > div > img {
     width: 200px;
-    height: 100px;
-    background-color: #959595;
-    margin: .25rem;
 }
 
 /* Tablet Responsive */
 @media all and (max-width: 768px){
-
-    :root {overflow-x: hidden;}
-
     /* banner */
     .banner-title {
         font-size: 2em;
@@ -380,31 +384,57 @@
 
     .banner-desc {
         padding: 2rem 0;
-        padding-right: 1rem;
+        font-size: 1em;
+    }
+
+    .banner-desc p {
+        width: 90%;
     }
 
     /* feature */
+    .feature {
+        padding: 2rem 1rem;
+    }
+
     .feature-card-container span {
         padding: .5rem .75rem;
     }
 
     /* product */
     .product {
-        padding: 4rem 0;
+        padding: 5rem 0 3rem;
+    }
+
+    .product h2 {
+        font-size: 2em;
+    }
+
+    .product-category ul li {
+        font-size: .75em;
+    }
+
+    .product-category a {
+        font-size: .75em;
     }
 
     .product-card-container {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin-left: .75rem;
-        margin-right: .75rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr 1fr;
     }
 
     .product-card-container > div {
-        flex: 0 0 auto;
-        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-card-container .best-seller {
+        transform: scale(1);
+    }
+
+    .product-card-container .best-seller div {
+        width: 100%;
     }
 
     /* service */
@@ -412,32 +442,36 @@
         padding: 2rem 0;
     }
 
-    /* tech partner */
-    .tech-partner > .container-fluid > span {
-        font-size: 1.5em;
+    .service-container {
+        gap: 1rem;
     }
 
-    .tech-partner > .container-fluid > h2 {
-        width: 90%;
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2rem 1.5rem;
     }
 
+    .service-card button {
+        margin-top: 1rem;
+    }
 }
 
 /* Phone Responsive */
 @media all and (max-width: 320px){
-
     /* banner */
     .banner {
-        height: 100vh;
-        margin-right: 1rem;
+        padding-bottom: 1rem;
     }
 
-    .banner-title h1 {
-        font-size: 2rem;
+    .banner > div {
+        grid-template-columns: 1fr !important;
     }
 
-    .banner > .container-fluid {
-        grid-template-columns: .5fr 1fr;
+    .banner-title {
+        padding: 0;
+        font-size: 1.5em;
     }
 
     .banner-desc {
@@ -445,126 +479,77 @@
         padding-right: 0;
     }
 
-    .best-seller {
-        transform: scale(1);
-    }
-
     /* feature */
     .feature {
         width: 100%;
     }
+
+    .feature > div {
+        flex-direction: column;
+    }
+
+    .feature-title {
+        order: -1;
+    }
+
+    .feature-title h2 {
+        font-size: 2em;
+        text-align: left;
+    }
+
+    .feature-title a {
+        text-align: left;
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-desc p {
+        display: none;
+    }
     
     /* Product */
-
     .product {
         padding: 2rem 0;
-        width: 100%;
-    }
-
-    .product-card-container {
-        grid-template-columns: .1fr .1fr .1fr .1fr;
-        gap: 1.5rem;
-    }
-
-    .product-card-container > div h3 {
-        font-size: calc(1.5em - .1em);
-    }
-
-    .product-card-container > div hr {
-        width: 30%;
-        margin: .8rem auto;
-    }
-
-    .product-card-container > div .price span {
-        font-size: calc(2.5em - .4em);
-    }
-
-    .product-card-container > div ul li {
-        font-size: 12px;
-    }
-
-    .product-card-container > div button {
-        padding: .8rem 1rem;
     }
 
     .product-header {
-        margin-left: .3rem;
-        margin-right: .3rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 
-    .product-header h2 {
-        font-size: 1.5em;
+    .product-header ul li {
+        text-align: center;
+    }
+
+    .product-card-container {
+        margin: 0;
+        grid-template-columns: 1fr;
     }
 
     /* Service */
     .service {
-        padding: 1.5rem 0;
-        width: 100%;
+        padding: 2rem 0;
     }
     
     .service-container {
-        display: flex;
-        grid-template-columns: 0;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        margin-left: .75rem;
-        margin-right: .75rem;
+        grid-template-columns: 1fr;
     }
 
-    .service-container > div {
-        flex: 0 0 wrap;
-    }
-
-    .service h2{
-        font-size: calc(2.5em - .5em);
-    }
-
-    .service-card {
-        padding: 1rem 1.5rem;
-    }
-
-    .service-card h3 {
-        font-size: calc(1.75em - .35em);
-    }
-
-    .sarvice-card hr {
-        margin: .8rem auto;
+    .service h2 {
+        font-size: 2em;
     }
 
     .service-card p{
-        font-size: 13px;
-        line-height: 1.3;
+        font-size: 1em;
         text-align: center;
     }
 
     .service-card ul {
-        font-size: 12px;
+        font-size: 1em;
     }
 
-    /* Tech partner */
-    .tech-partner {
-        padding: 1rem 0;
-    }
-
-    .tech-partner > .container-fluid {
-        width: 100%;
-    }
-
-    .tech-partner > .container-fluid > span {
-        font-size: 1.25em;
-    }
-
-    .tech-partner > .container-fluid > h2 {
-        font-size: 1.2em;
-    }
-
-    .tech-partner-container {
-        justify-content: flex-start;
-        margin-left: 2px;
-    }
-
-    .tech-partner-container > div {
-        width: 130px;
-        height: 100px;
+    .tech-partner-container > div > img {
+        width: 100px;
     }
 }

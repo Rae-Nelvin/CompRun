@@ -79,4 +79,4 @@ document.querySelector('#testiNext').addEventListener('click', async () => {
     currCarousel.classList.remove('active');
     nextSibling.classList.add('active');
   }, { once: true })
-}, 250))
+}, 250)

@@ -87,7 +87,16 @@ window.addEventListener('scroll', (e) => {
   }
 })
 
-// Account Pop Up
-document.querySelector('.account-img').addEventListener('click', () => {
-  document.querySelector('.account-menu').style.height = '90px';
+document.querySelector('.burger').addEventListener('click', () => {
+  document.querySelector('.nav-mobile').style.width = '100%'
+})
+
+document.querySelector('.close-btn').addEventListener('click', () => {
+  document.querySelector('.nav-mobile').style.width = '0'
+})
+
+document.querySelector('.nav-mobile ul > li.product').addEventListener('click', () => {
+  let dropdown = document.querySelector('.nav-mobile ul ul');
+  if(dropdown.style.display === '' || dropdown.style.display === 'none') dropdown.style.display = 'block';
+  else dropdown.style.display = 'none';
 })

@@ -62,7 +62,7 @@ main {
     position: relative;
 }
 
-nav{
+header nav{
     position:relative;
     display:-ms-flexbox;
     display:flex;
@@ -78,9 +78,10 @@ nav{
     z-index: 99;
     transition: .3s;
     top: 0;
+    background-color: #F9F9F9;
 }
 
-nav.scrolled {
+header nav.scrolled {
     background-color: #F9F9F9;
 }
 
@@ -99,11 +100,11 @@ nav.scrolled {
 }
 
 /* Nav */
-nav > .container-fluid > div:first-child {
+header nav > .container-fluid > div:first-child {
     display: flex;
 }
 
-nav > .container-fluid > div > a {
+header nav > .container-fluid > div > a {
     margin-right: 2rem;
 }
 
@@ -191,6 +192,83 @@ nav > .container-fluid > div:last-child a {
     padding: .75rem 5rem .75rem 1rem;
     text-align: left;
     color: var(--primary-color) !important;
+}
+
+.burger {
+    display: none;
+}
+
+.burger button {
+    background: transparent;
+    font-size: 2em;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Nav Mobile */
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    background-color: #ECECEC;
+    z-index: 100;
+    transition: .5s;
+}
+
+.nav-mobile nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.close-btn button {
+    border: 0;
+    background-color: transparent;
+    font-size: 2.5em;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+
+.nav-mobile > nav > ul {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.nav-mobile > nav > ul > li {
+    padding: .5rem 0;
+}
+
+.nav-mobile ul ul {
+    background-color: rgb(149, 149, 149, 0.2);
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    display: none;
+}
+
+.nav-mobile ul ul li {
+    padding: .5rem;
+}
+
+.nav-mobile img {
+    width: 200px;
+    margin-bottom: 1rem;
+}
+
+.product-nav-toggle {
+    display: block;
 }
 
 /* Footer */
@@ -342,6 +420,14 @@ nav > .container-fluid > div:last-child a {
     height: 0;
 }
 
+@media all and (max-width: 1200px) {
+    #Top nav > div > div:last-child > a {
+        margin-right: 1rem;
+        width: 150px;
+        text-align: right;
+    }
+}
+
 @media all and (max-width: 768px) {
     .container-fluid {
         width: 100%;
@@ -353,8 +439,12 @@ nav > .container-fluid > div:last-child a {
         overflow: hidden;
     }
 
+    #Top nav > div > div:last-child > a {
+        display: none;
+    }
+
     .footer-first-layer, .footer-second-layer {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .footer-first-layer ul {
@@ -370,6 +460,20 @@ nav > .container-fluid > div:last-child a {
     }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 476px) {
+    .navbar-nav {
+        display: none;
+    }
 
+    .account-img {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .footer-first-layer, .footer-second-layer {
+        grid-template-columns: 1fr;
+    }
 }
