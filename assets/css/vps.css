@@ -41,6 +41,10 @@
     padding: 2rem 0;
 }
 
+.banner-title h1 {
+    font-size: 1.25em;
+}
+
 .banner-title span {
     color: var(--primary-color);
 }
@@ -398,6 +402,71 @@
     color: #2c2c2c;
 } */
 
+/* Section Question */
+.question {
+    padding: 2rem 0 5rem;
+}
+
+.question-container {
+    background: linear-gradient(219.16deg, rgba(230, 242, 244, 0.192) 23.25%, rgba(0, 127, 142, 0.156) 135.04%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.question-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-container img {
+    height: 150px;
+}
+
+.question-title {
+    font-size: 1.5em;
+    margin-left: 3rem;
+}
+
+.question-title h2 {
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.question-title h2 span {
+    color: var(--primary-color);
+}
+
+.question-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-button button {
+    padding: .5rem 1rem;
+    font-size: 1.75em;
+    margin: 0 1rem;
+    background-color: var(--accent-color);
+    color: #FFF;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.question-button button:first-child {
+    background-color: transparent;
+    color: var(--accent-color);
+    font-size: 2em;
+}
+
 /* Section Tech Partner */
 .tech-partner {
     padding: 2rem 0;
@@ -527,6 +596,16 @@
     .service-card button {
         margin-top: 1rem;
     }
+
+    .question-title h2 {
+        font-size: 1.5em;
+        letter-spacing: 0;
+    }
+
+    .question-button button {
+        font-size: 1.25em;
+        margin: .25em;
+    }
 }
 
 /* Phone Responsive */
@@ -632,6 +711,23 @@
 
     .service-card ul {
         font-size: 1em;
+    }
+
+    .question-container {
+        flex-direction: column;
+    }
+
+    .question-container > div {
+        flex-direction: column;
+    }
+
+    .question-title {
+        margin: 0;
+        margin: 1rem 0;
+    }
+
+    .question-button {
+        flex-direction: row !important;
     }
 
     .tech-partner-container > div > img {
